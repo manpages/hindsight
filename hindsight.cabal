@@ -1,0 +1,39 @@
+-- This file has been generated from package.yaml by hpack version 0.27.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 88203e72fa636764b50c5e28b4d4d810868913358a55bcffdb9f6bfe43744ce5
+
+name:           hindsight
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/manpages/hindsight#readme>
+homepage:       https://github.com/manpages/hindsight#readme
+bug-reports:    https://github.com/manpages/hindsight/issues
+author:         Jonn Mostovoy
+maintainer:     jm@memorici.de
+copyright:      CC-BY
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/manpages/hindsight
+
+executable jonn-hindsights
+  main-is: site.hs
+  other-modules:
+      Paths_hindsight
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+                base >=4.7 && <5
+              , hakyll == 4.9.*
+              , pandoc
+              , binary
+              , containers
+  default-language: Haskell2010
