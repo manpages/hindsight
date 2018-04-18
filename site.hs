@@ -9,6 +9,8 @@ import           Hakyll
 import           Hakyll.Core.Identifier (fromFilePath)
 import           Text.Pandoc.Options
 import           Control.Monad (forM_)
+import           System.IO (hSetEncoding, utf8, stdin, stdout, stderr)
+import qualified GHC.IO.Encoding as E
 
 --------------------------------------------------------------------------------
 siteCat :: [String]
@@ -25,7 +27,13 @@ loader x         = loadAll (fromGlob $ "posts/" ++ x ++ "/*")
 --}
 
 main :: IO ()
-main = hakyll $ do
+main = do
+  E.setLocaleEncoding E.utf8
+  E.setFileSystemEncoding E.utf8
+  E.setForeignEncoding E.utf8
+  mapM_ (`hSetEncoding` utf8) [stdin, stdout, stderr]
+
+  hakyll $ do
 
     match "images/*" $ do
       route   idRoute
