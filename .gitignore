@@ -1,0 +1,8 @@
+.stack-work/
+hindsight.cabal
+*~
+_site/
+_posts/
+dist/
+_cache/
+\#*\#

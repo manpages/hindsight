@@ -1,0 +1,32 @@
+body {
+  max-width: 620px;
+  text-align: justify;
+  margin: 0 auto;
+  margin-top: 0.5em;
+}
+
+.center, div#footer {
+  text-align: center;
+}
+
+a {
+  color: black;
+}
+
+div#navigation > a {
+    text-decoration: none;
+}
+
+div#footer a {
+  font-variant: small-caps;
+  text-decoration: none;
+}
+
+div#logo, .right {
+  margin-left: 20px;
+  float: right;
+}
+
+h1, h2, h3, h4 {
+  text-align: left;
+}

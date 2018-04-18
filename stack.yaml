@@ -1,0 +1,11 @@
+resolver: lts-9.13
+
+packages: [.]
+
+nix:
+  packages: [ zlib ]
+
+extra-deps: []
+
+flags: {}
+extra-package-dbs: []
