@@ -3,7 +3,7 @@ title: /
 date: January 7, 2015
 ---
 
-## Jonn's Hindsights
+## Jonn Hindsights
 
 A lot of time has passed since I have been writing coherent texts for
 audience broader than my colleagues and employees. It\'s time for my
